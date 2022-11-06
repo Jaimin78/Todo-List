@@ -14,6 +14,7 @@ const addToDo = () => {
   localStorage.setItem("todo",saveList)
   }
   getTodo()
+  document.getElementById('input').value = "";
 }
 
 const getTodo = () => {
@@ -23,15 +24,19 @@ const getTodo = () => {
     ihtml += `
       <li class="list-group-item d-flex mb-1 justify-content-between align-items-center">
     ${todos[i].todo}
-            <button type="button" class="btn-close" onClick = "removeTodo(${todo[i]})" aria-label="Close"></button>
+            <button type="button" class="btn-close" onClick = "removeTodo(${i})" aria-label="Close"></button>
            </li>
     `
   }
   showtodo.innerHTML = ihtml
+  todolist = todos
 }
 
-const removeTodo = () =>{
-  
+const removeTodo = (i) =>{
+  let rem = i
+  todolist.splice(i,1)
+  localStorage.setItem("todo", JSON.stringify(todolist))
+  getTodo()
 }
 
 setTimeout(()=>{
