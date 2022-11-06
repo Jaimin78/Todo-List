@@ -9,8 +9,33 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
-  
+<body class="bg-dark">
+  <header class="rounded m-2 text-warning fs-1 text-center">Todo List</header>
+<div class="container">
+     <div class="mb-3 m-2 d-grid">
+       <input type="texf" id="input" class="form-control" placeholder="Enter your todo">
+       <button type="button" onclick="addToDo()" class="btn btn-primary m-2">Save Todo</button>   
+     </div>
+     <div>
+       <h2 class="text-primary m-2">Todo List</h2>
+       <div id="todoContainer" class="">
+         <ul class="list-group">
+            <li class="list-group-item d-flex mb-1 justify-content-between align-items-center">
+    A list item
+            <button type="button" class="btn-close" aria-label="Close"></button>
+           </li>
+           <li class="list-group-item d-flex mb-1 justify-content-between align-items-center">
+    A list item
+            <button type="button" class="btn-close" aria-label="Close"></button>
+           </li>
+           <li class="list-group-item d-flex mb-1 justify-content-between align-items-center">
+    A list item
+            <button type="button" class="btn-close" aria-label="Close"></button>
+           </li>
+         </ul>
+       </div>
+     </div>
+</div>
   <script src="script.js"></script> 
   <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
